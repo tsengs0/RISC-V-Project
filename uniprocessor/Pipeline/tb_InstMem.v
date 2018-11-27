@@ -1,5 +1,5 @@
 `timescale 1ns/100ps
-`include "../macros/define.v"
+`include "../macros/define.v" 
 
 module tb_InstMem;
 

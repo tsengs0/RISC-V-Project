@@ -1,4 +1,4 @@
-`include "../macros/define.v"
+`include "../macros/define.v" 
 
 // Read requested memory address and output its corresponding instruction from instruction memory	
 module InstMem_controller (
