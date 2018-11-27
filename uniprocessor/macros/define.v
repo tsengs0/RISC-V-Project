@@ -26,4 +26,20 @@
 `define EXE_BLTU 7'b1_1000_11 // bltu
 `define EXE_BGEU 7'b1_1000_11 // bgeu
 
+`define EXE_ORI 7'b0_0100_11 // ori
 
+// Instruction Memory (ROM) 
+`define InstAddrBus 31:0
+`define InstBus 31:0
+`define InstMemNum 131071 // The actual size of ROM is 128KB
+`define InstMemNumLog2 17 // The actual size of address
+
+// Register File: regfile
+`define RegAddrBus 4:0 // The size of address bus, i.e., 5
+`define RegBus 63:0 	   // The size of data bus is 64-bit
+`define RegWidth 64      // The data size of each register is 64-bit
+`define DoubleRegWidth 128
+`define DoubleRegBus 127:0
+`define RegNum 32 //  The register from x0 to x31
+`define RegNumLog2 5 // The size of address bus, i.e., log 32 base 2 = 5
+`define NOPRegAddr 5'b0_0000
