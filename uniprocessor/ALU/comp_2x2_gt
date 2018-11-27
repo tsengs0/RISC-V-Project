@@ -1,0 +1,48 @@
+#! /usr/bin/vvp
+:ivl_version "10.1 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x55ab6ba55230 .scope module, "comp_2x2_gt" "comp_2x2_gt" 2 1;
+ .timescale 0 0;
+    .port_info 0 /INPUT 3 "SrcA"
+    .port_info 1 /INPUT 3 "SrcB"
+    .port_info 2 /OUTPUT 1 "out_g"
+L_0x55ab6ba76140 .functor AND 1, L_0x55ab6ba76210, L_0x55ab6ba763b0, C4<1>, C4<1>;
+L_0x55ab6ba763b0 .functor NOT 1, L_0x55ab6ba762b0, C4<0>, C4<0>, C4<0>;
+L_0x55ab6ba764c0 .functor AND 1, L_0x55ab6ba765c0, L_0x55ab6ba76700, L_0x55ab6ba76870, C4<1>;
+L_0x55ab6ba76960 .functor AND 1, L_0x55ab6ba76a00, L_0x55ab6ba76b30, L_0x55ab6ba76cb0, C4<1>;
+L_0x55ab6ba76e30 .functor OR 1, L_0x55ab6ba76140, L_0x55ab6ba764c0, L_0x55ab6ba76960, C4<0>;
+o0x7fb504142018 .functor BUFZ 3, C4<zzz>; HiZ drive
+v0x55ab6ba55400_0 .net "SrcA", 2 0, o0x7fb504142018;  0 drivers
+o0x7fb504142048 .functor BUFZ 3, C4<zzz>; HiZ drive
+v0x55ab6ba75440_0 .net "SrcB", 2 0, o0x7fb504142048;  0 drivers
+v0x55ab6ba75520_0 .net *"_s1", 0 0, L_0x55ab6ba76210;  1 drivers
+v0x55ab6ba755e0_0 .net *"_s11", 0 0, L_0x55ab6ba76870;  1 drivers
+v0x55ab6ba756c0_0 .net *"_s13", 0 0, L_0x55ab6ba76a00;  1 drivers
+v0x55ab6ba757f0_0 .net *"_s15", 0 0, L_0x55ab6ba76b30;  1 drivers
+v0x55ab6ba758d0_0 .net *"_s17", 0 0, L_0x55ab6ba76cb0;  1 drivers
+v0x55ab6ba759b0_0 .net *"_s3", 0 0, L_0x55ab6ba762b0;  1 drivers
+v0x55ab6ba75a90_0 .net *"_s4", 0 0, L_0x55ab6ba763b0;  1 drivers
+v0x55ab6ba75c00_0 .net *"_s7", 0 0, L_0x55ab6ba765c0;  1 drivers
+v0x55ab6ba75ce0_0 .net *"_s9", 0 0, L_0x55ab6ba76700;  1 drivers
+v0x55ab6ba75dc0_0 .net "and_1", 0 0, L_0x55ab6ba76140;  1 drivers
+v0x55ab6ba75e80_0 .net "and_2", 0 0, L_0x55ab6ba764c0;  1 drivers
+v0x55ab6ba75f40_0 .net "and_3", 0 0, L_0x55ab6ba76960;  1 drivers
+v0x55ab6ba76000_0 .net "out_g", 0 0, L_0x55ab6ba76e30;  1 drivers
+L_0x55ab6ba76210 .part o0x7fb504142018, 1, 1;
+L_0x55ab6ba762b0 .part o0x7fb504142048, 1, 1;
+L_0x55ab6ba765c0 .part o0x7fb504142018, 0, 1;
+L_0x55ab6ba76700 .part o0x7fb504142048, 1, 1;
+L_0x55ab6ba76870 .part o0x7fb504142048, 0, 1;
+L_0x55ab6ba76a00 .part o0x7fb504142018, 1, 1;
+L_0x55ab6ba76b30 .part o0x7fb504142018, 0, 1;
+L_0x55ab6ba76cb0 .part o0x7fb504142048, 0, 1;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "comp_2x2_gt.v";

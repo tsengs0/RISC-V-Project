@@ -1,0 +1,71 @@
+$date
+	Wed Nov 21 20:58:47 2018
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	100ps
+$end
+$scope module tb_branch_op $end
+$var wire 1 ! result $end
+$var reg 3 " InstSel [2:0] $end
+$var reg 64 # SrcA [63:0] $end
+$var reg 64 $ SrcB [63:0] $end
+$scope module u0 $end
+$var wire 3 % InstSel [2:0] $end
+$var wire 64 & SrcA [63:0] $end
+$var wire 64 ' SrcB [63:0] $end
+$var reg 1 ! result $end
+$var reg 64 ( xor_out [63:0] $end
+$var integer 32 ) i [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx )
+bx (
+b0 '
+b0 &
+bz %
+b0 $
+b0 #
+bz "
+x!
+$end
+#500
+0!
+b101 (
+b1000000 )
+b101 #
+b101 &
+b0 "
+b0 %
+#1000
+1!
+b1000000 )
+b101 $
+b101 '
+b0 #
+b0 &
+b1 "
+b1 %
+#1500
+0!
+b1111 (
+b1000000 )
+b1010 #
+b1010 &
+b0 "
+b0 %
+#2000
+1!
+b1000000 )
+b1010 $
+b1010 '
+b101 #
+b101 &
+b1 "
+b1 %
+#2500
