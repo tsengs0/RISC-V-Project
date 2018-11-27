@@ -5,7 +5,7 @@ module if_id (
 	input wire rstn,
 
 	input wire [`InstAddrBus] pc_addr_if, // The address of currently fetched instruction (from the result of instruction fetching step) 
-	input wire [`InstBus]     fetched_inst_if // The instruction fetched at any clock cycle
+	input wire [`InstBus]     fetched_inst_if, // The instruction fetched at any clock cycle
 
 	output reg [`InstAddrBus] pc_addr_id, // The address of currnetly fetched instruction (to instruction decoding step)
 	output reg [`InstBus] fetched_inst_id // The fetched instruction to instruction decoder
