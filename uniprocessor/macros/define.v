@@ -30,6 +30,7 @@
 
 // Instruction Memory (ROM) 
 `define InstAddrBus 31:0
+`define InstAddrWidth 32
 `define InstBus 31:0
 `define InstMemNum 131071 // The actual size of ROM is 128KB
 `define InstMemNumLog2 17 // The actual size of address
