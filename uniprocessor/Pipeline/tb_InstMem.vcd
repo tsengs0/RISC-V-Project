@@ -1,0 +1,69 @@
+$date
+	Wed Nov 28 01:47:01 2018
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	100ps
+$end
+$scope module tb_InstMem $end
+$var wire 32 ! inst [31:0] $end
+$var reg 1 " ce $end
+$var reg 32 # inst_addr [31:0] $end
+$scope module u0 $end
+$var wire 1 " ce $end
+$var wire 32 $ inst_addr [31:0] $end
+$var wire 6 % inst_mem_index [5:0] $end
+$var reg 32 & inst [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 &
+b0 %
+b0 $
+b0 #
+0"
+b0 !
+$end
+#100
+1"
+#200
+b10001000100010001000100010001 !
+b10001000100010001000100010001 &
+b1 %
+b100 #
+b100 $
+#300
+b100010001000100010001000100010 !
+b100010001000100010001000100010 &
+b10 %
+b1000 #
+b1000 $
+#400
+b110011001100110011001100110100 !
+b110011001100110011001100110100 &
+b11 %
+b1100 #
+b1100 $
+#500
+b1000100010001000100010001000100 !
+b1000100010001000100010001000100 &
+b100 %
+b10000 #
+b10000 $
+#600
+b11111111111111111111111111111111 !
+b11111111111111111111111111111111 &
+b101 %
+b10100 #
+b10100 $
+#700
+bx !
+bx &
+b110 %
+b11000 #
+b11000 $
+#1700
