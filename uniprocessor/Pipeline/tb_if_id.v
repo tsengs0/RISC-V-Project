@@ -3,8 +3,8 @@
 
 module tb_if_id;
 
-    reg sys_clk, rstn;
-	wire ce;
+	reg sys_clk, rstn;
+    	wire ce;
 	wire [`InstAddrBus] pc_addr;
 	wire [`InstBus] inst;
 	wire [`InstAddrBus] pc_addr_id;
