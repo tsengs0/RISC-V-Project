@@ -35,7 +35,7 @@ module tb_if_id;
 	initial begin
 		$dumpfile("tb_if_id.vcd");
 		$dumpvars(0, tb_if_id);
-		$monitor("ce: %b, pc_addr: %h, inst: %h, pc_addr_id: %h, fetched_inst_id: %h", ce, pc_addr, inst, pc_addr_id, fetched_inst_id);
+		$monitor("%t ce: %b, pc_addr: %h, inst: %h, pc_addr_id: %h, fetched_inst_id: %h", $time, ce, pc_addr, inst, pc_addr_id, fetched_inst_id);
 	end
 
 	initial begin
