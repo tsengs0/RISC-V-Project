@@ -1,6 +1,7 @@
 `define RstEnable  	1'b0	// Reset whilst signal '0'
 `define RstDisable 	1'b1 
 `define ZeroWord   	32'h0000_0000 
+`define ZeroDoubleWord  64'h0000_0000_0000_0000
 `define WriteEnable 	1'b1
 `define WriteDisable	1'b0
 `define ReadEnable	1'b1

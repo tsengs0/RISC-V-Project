@@ -3,19 +3,20 @@ FLAGS = -Wall -Winfloop
 
 MACROS_DIR = ../macros
 PIPELINE_APP = tb_if_id
+MEM_DIR = ../MEM
 PIPELINE_DIR = ./
 PC_DIR = ../PC
 
 
 all: 	$(PIPELINE_DIR)/tb_if_id.v \
 	$(PIPELINE_DIR)/if_id.v \
-	$(PIPELINE_DIR)/InstMem_controller.v \
+	$(MEM_DIR)/InstMem_controller.v \
 	$(PC_DIR)/pc.v \
 	$(MACROS_DIR)/define.v
 
 	$(CC) $(FLAGS) -o $(PIPELINE_APP) $(PIPELINE_DIR)/tb_if_id.v \
 					  $(PIPELINE_DIR)/if_id.v \
-					  $(PIPELINE_DIR)/InstMem_controller.v \
+					  $(MEM_DIR)/InstMem_controller.v \
 					  $(PC_DIR)/pc.v \
 					  $(MACROS_DIR)/define.v
 	
