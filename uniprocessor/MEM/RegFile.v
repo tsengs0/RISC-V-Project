@@ -19,10 +19,11 @@ module RegFile (
 
 	// Declaring those 31 general-purpose registers x1 - x31, which hold integer values.
 	reg [`RegBus] x_regs[0:`RegNum-1]; 
-	integer i;	
+
+	// Only for testbench
 	initial begin
-		for(i = 0; i < `RegNum; i++)
-			x_regs[i] <= $itor(i);
+		$display("Loading Registers");
+		$readmemh("RegRead_pattern.mem", x_regs);
 	end
 
 	//==========================================================================================//

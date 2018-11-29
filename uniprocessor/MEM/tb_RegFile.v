@@ -42,7 +42,7 @@ module tb_RegFile;
 		#20;
 		rstn <= `RstDisable;
 
-		#300 $finish;
+		#1000 $finish;
 	end
 
 	initial begin
@@ -51,7 +51,7 @@ module tb_RegFile;
 
 		forever #10 sys_clk <= ~sys_clk;
 		
-		#300 $finish;
+		#1000 $finish;
 	end
 
 	integer i;
@@ -69,6 +69,7 @@ module tb_RegFile;
 			ReadAddr_1 <= ReadAddr_1 + 1'b1;
 			ReadAddr_2 <= ReadAddr_2 - 1'b1;
 		end
+		#1000 $finish;
 
 	end
 
@@ -82,11 +83,13 @@ module tb_RegFile;
 			RegRead_1 <= ~RegRead_1;
 			RegRead_2 <= ~RegRead_2;
 		end	
+		#1000 $finish;
 	end
 
 	initial begin
 		#0   RegWrite <= 1'b0;
 		#700 RegWrite <= 1'b1;
+		#1000 $finish;
 	end
 
 	initial begin
@@ -97,10 +100,22 @@ module tb_RegFile;
 			#10
 			WriteAddr <= WriteAddr + $itor(i);
 		end
+		#1000 $finish;
 	end
 
+	reg [`RegBus] x_regs_temp[0:`RegNum-1];
 	initial begin
-		
+		$display("Loading Write Registers");
+		$readmemh("RegWrite_pattern.mem", x_regs_temp);
+		#1000 $finish;
+	end
+	initial begin
+		#0 RegWrite <= 'd0;
+		#700;
+		for(i = 0; i < 32; i++) begin
+			#10 RegWrite <= x_regs_temp[i];
+		end	
+		#1000 $finish;
 	end
 
 endmodule
