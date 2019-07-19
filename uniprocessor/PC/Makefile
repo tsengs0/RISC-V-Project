@@ -1,17 +1,16 @@
-CC = iverilog 
-FLAGS = -Wall -Winfloop
-
 MACROS_DIR = ../macros
-PC_APP = tb_pc
-PC_DIR = ./
+PC_DIR = .
+
+SIMPRG   = vcs -full64 -v2005
+SIM_FILE = tb_pc
+SOURCES  = $(PC_DIR)/pc.v $(PC_DIR)/tb_pc.v $(MACROS_DIR)/define.v
 
 
-all: $(PC_DIR)/pc.v $(PC_DIR)/tb_pc.v $(MACROS_DIR)/define.v
-	$(CC) $(FLAGS) -o $(PC_APP) $(PC_DIR)/pc.v $(PC_DIR)/tb_pc.v $(MACROS_DIR)/define.v
-	
-	vvp $(PC_DIR)/tb_pc
-	gtkwave $(PC_DIR)/tb_pc.vcd
+all:
+	$(SIMPRG) $(SOURCES) -o $(SIM_FILE)
 
+run:
+	./${SIM_FILE}
 
 clean:
-	rm $(PC_DIR)/$(PC_APP) $(PC_DIR)/$(PC_APP).vcd
+	rm -rf $(SIM_FILE) $(SIM_FILE).daidir csrc ucli.key
