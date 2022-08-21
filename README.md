@@ -5,7 +5,8 @@ Implementation of  RV32I base ISA which contains 47 instructions, the instructio
 
 | Instruction | Format | Opcode [binary] | Description | Current status | Finished |
 | ---- | --- | ---------- | -------------------- | ----- | --- |
-| lui | U | 2'b0110111 | **Load upper immediate** places the U-immediate value (in the top 20 bits) of the destination register *rd*, and fills in the lowest 12 bits with zeros. | in progress | &#x2610; |
+| lui | U | 2'b011_0111 | **Load upper immediate** places the U-immediate value (in the top 20 bits) of the destination register **rd**, and fills in the lowest 12 bits with zeros. | in progress | &#x2610; |
+| auipc | U | 2'b001_0111 | **Add upper immediate to PC** forms a 32-bit offset from the 20-bit U-immediate (in order to build PC-relateive addresses), filling in the lowest 12 bits with zeros, adds this offset to the **PC**, then places the result in register **rd**. | in progress | &#x2610; |
 
 The above list is referred to the pp. 18 of [^1].
 
