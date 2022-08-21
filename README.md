@@ -1,4 +1,4 @@
-## A base repository of 32-bit RISC-V core where the varying instruction extensions are created by distinct branches.
+A base repository of 32-bit RISC-V core where the varying instruction extensions are created by distinct branches.
 
 ## Work to be done (latest update: 21 Aug., 2022)
 Implementation of  RV32I base ISA which contains 47 instructions, the instruction list is shown as the following table.
