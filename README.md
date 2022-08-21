@@ -8,12 +8,12 @@
 
 The above list is referred to the pp. 18 of [^1].
 
-## Referencs
-[^1] Patterson, David, and Andrew Waterman. The RISC-V Reader: an open architecture Atlas. Strawberry Canyon, 2017.
-
 ## Misc.
 
 |checked|unchecked|crossed|
 |---|---|---|
 |&check;|_|&cross;|
 |&#x2611;|&#x2610;|&#x2612;|
+
+## Referencs
+[^1]: Patterson, David, and Andrew Waterman. The RISC-V Reader: an open architecture Atlas. Strawberry Canyon, 2017.
