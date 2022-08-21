@@ -4,7 +4,7 @@
 
 | Instruction | Format | Opcode | Description | Current status | Finished |
 | ---- | --- | ---------- | -------------------- | ----- | --- |
-| lui | U | 2'b0110111 | **Load upper immediate** is used to build 32-bit constants. | in progress | &#x2610; |
+| lui | U | 2'b0110111 | **Load upper immediate** places the U-immediate value (in the top 20 bits) of the destination register *** rd ***, and fills in the lowest 12 bits with zeros. | in progress | &#x2610; |
 
 The above list is referred to the pp. 18 of [^1].
 
@@ -17,3 +17,4 @@ The above list is referred to the pp. 18 of [^1].
 
 ## Referencs
 [^1]: Patterson, David, and Andrew Waterman. The RISC-V Reader: an open architecture Atlas. Strawberry Canyon, 2017.
+[^2]: https://msyksphinz.hatenablog.com/entry/2020/05/18/040000
