@@ -4,7 +4,7 @@
 
 | Instruction | Format | Opcode | Description | Current status | Finished |
 | ---- | --- | ---------- | -------------------- | ----- | --- |
-| lui | U | 2'b0110111 | **Load upper immediate** places the U-immediate value (in the top 20 bits) of the destination register *** rd ***, and fills in the lowest 12 bits with zeros. | in progress | &#x2610; |
+| lui | U | 2'b0110111 | **Load upper immediate** places the U-immediate value (in the top 20 bits) of the destination register *rd*, and fills in the lowest 12 bits with zeros. | in progress | &#x2610; |
 
 The above list is referred to the pp. 18 of [^1].
 
