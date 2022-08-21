@@ -4,4 +4,16 @@
 
 | Instruction | Format | Opcode | Description | Current status | Finished |
 | ---- | --- | ---------- | -------------------- | ----- | --- |
-| lui | U | 2'b0110111 | **Load upper immediate** is used to build 32-bit constants. | in progress | &#x2611; |
+| lui | U | 2'b0110111 | **Load upper immediate** is used to build 32-bit constants. | in progress | &#x2610; |
+
+The above list is referred to the pp. 18 of [^1].
+
+## Referencs
+[^1] Patterson, David, and Andrew Waterman. The RISC-V Reader: an open architecture Atlas. Strawberry Canyon, 2017.
+
+## Misc.
+
+|checked|unchecked|crossed|
+|---|---|---|
+|&check;|_|&cross;|
+|&#x2611;|&#x2610;|&#x2612;|
