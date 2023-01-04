@@ -1,0 +1,72 @@
+How to Create Personal Access Token(PAT) on GitHub?
+
+Now that we know the issue and the solution let us generate and use Personal Access Token in various environments.
+
+Step 1: Log in to Github
+
+Step 2: Click on the GitHub Profile icon on the right-hand corner
+
+Step 3: Click on Settings
+
+Step 4: On the settings page, Click on Developer Settings
+
+Step 5: On the Developer settings page, click on the Personal Access token
+
+Step 6: Click on Generate New Token to start creating Personal Access token
+
+Step 7: Select the Token expiration according to your need. Avoid No expiration for stronger security.
+
+Step 8: Select the desired scopes to grant to the generated token.
+
+Step 9: Click on Generate token to create a new token.
+
+Step 10: Copy and use the newly generated token to authenticate and perform Git operations, as shown below.
+Use the copied token as your password when you push/pull the repository to/from to local host.
+Current Personal Access Tokens (Expires on Sat, 7 Jan 2023): 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
+
+
+
+
+
+
+
+
+
+
+
+
+Solution for Windows Users
+
+Step 1: Go to Credential Manager from Control Panel
+
+Step 2: Select windows credentials
+
+Step 3: Click on Add a Generic Credentials if you add it for the first time. Otherwise, find git:https://github.com and click on edit to modify the credentials.
+
+Step 4: On the internet/network address, add the git:https://github.com
+
+Step 5: On the username field, enter your Github username, and in the password field, enter the Personal Access token which you generated from the above steps
+
+Step 6: Click ok to save the Credentials.
+
+
+
+
+Sep 1: Configure the local git client with a username and email address by running the below command
+
+$ git config --global user.name "your_github_username"
+$ git config --global user.email "your_github_email"
+$ git config -l
+
+Step 2: Clone the GitHub repository using the below commands
+
+$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+> Cloning into `itsmycode`...
+$ Username for 'https://github.com' : username
+$ Password for 'https://github.com' : give your personal access token here
+
+Step 3: Cache the token in your computer with the below command so that every time you don’t have to enter
+
+$ git config --global credential.helper cache
+
+
